@@ -1,0 +1,130 @@
+.events-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #8B0000; /* dark red background */
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+h2, h3 {
+  color: #FFD700; /* bright yellow */
+  margin-bottom: 1rem;
+}
+
+form {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  padding: 0.5rem;
+  border: 2px solid #c99700; /* warm gold border */
+  border-radius: 4px;
+  background-color: #4B0000; /* darker red input bg */
+  color: #FFD700;
+  flex: 1 1 200px;
+}
+
+form input::placeholder {
+  color: #FFD700;
+}
+
+form button {
+  background-color: #FFD700;
+  color: #8B0000;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e6c200; /* slightly darker yellow */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #5C0000;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+}
+
+ul li strong {
+  color: #FFD700;
+}
+
+ul li button {
+  background-color: #FFD700;
+  color: #8B0000;
+  border: none;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+ul li button:hover {
+  background-color: #e6c200;
+}
+
+p {
+  color: #FFD700;
+}
+
+p[style*="color: red"] {
+  color: #FFB000; /* lighter yellow for errors, but still yellow */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #5C0000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #8B0000;
+}
+
+thead th {
+  color: #FFD700;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #4B0000;
+}
+
+tbody tr:hover {
+  background-color: #6B0000;
+}
+
+tbody td {
+  color: #FFD700;
+  padding: 0.7rem 1rem;
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
+  form input,
+  form button {
+    width: 100%;
+  }
+}

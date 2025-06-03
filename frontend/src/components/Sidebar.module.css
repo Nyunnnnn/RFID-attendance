@@ -1,0 +1,119 @@
+.sidebar {
+  width: 270px;
+  background-color: #b71c1c; /* red */
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: relative; /* For toggle button positioning */
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logoText h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.logoText p {
+  font-size: 12px;
+  margin: 0;
+  color: #D4AF37; /* warm gold for text subtitle */
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link:hover {
+  background-color: #D4AF37; /* warm gold highlight on hover */
+  color: #b71c1c; /* red text on highlight */
+}
+
+.active {
+  background-color: #D4AF37; /* warm gold highlight */
+  color: #b71c1c; /* red text */
+}
+
+/* When collapsed, hide only the text (span), keep icons visible */
+.collapsed .logoText {
+  display: none;
+}
+
+.collapsed .link span:nth-child(2) {
+  display: none; /* hide the text only, keep icon (first span) */
+}
+
+.collapsed {
+  width: 70px; /* narrower width when collapsed */
+  padding: 20px 10px;
+}
+
+.collapsed .logoImage {
+  margin-right: 0;
+}
+
+.collapsed .nav {
+  align-items: center;
+}
+
+/* Toggle button styles */
+.toggleButton {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 40px;
+  height: 100vh;
+  background-color: #D4AF37; /* warm gold */
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggleButton:hover {
+  background-color: #e1c16e; /* lighter warm gold on hover */
+}
+
+.toggleIcon {
+  font-size: 22px;
+  color: #b71c1c; /* red icon color */
+  user-select: none;
+}

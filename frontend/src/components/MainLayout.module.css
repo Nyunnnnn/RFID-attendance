@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.sidebarArea {
+  position: relative; /* so toggle button absolute positions relative here */
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
